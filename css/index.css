@@ -1,0 +1,145 @@
+/* Paleta original */
+:root {
+    --verde-menta: #A2E4B8;
+    --azul-oscuro: #0A2463;
+    --blanco-roto: #FFF9F0;
+    --rosa-suave: #FFD6E0;
+    --negro: #333333;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--blanco-roto);
+    color: var(--azul-oscuro);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--verde-menta);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-img {
+    width: 40px; /* Ajusta el tamaño según tu imagen */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.logo-img:hover {
+    transform: rotate(15deg); /* Efecto hover opcional */
+}
+
+.logo span {
+    color: var(--azul-oscuro);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--azul-oscuro);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--rosa-suave);
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid var(--azul-oscuro);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(162, 228, 184, 0.8), rgba(214, 235, 255, 0.8));
+    padding: 0 5%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+    color: var(--rosa-suave);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.frase-inspiradora {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 30px;
+    color: var(--negro);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-registro {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco-roto);
+}
+
+.btn-login {
+    background-color: var(--rosa-suave);
+    color: var(--azul-oscuro);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--verde-menta);
+    color: var(--azul-oscuro);
+}

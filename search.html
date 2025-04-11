@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar | EcoÉlite</title>
+    <link rel="stylesheet" href="css/search.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo EcoModa" class="logo-img">
+            <span>Eco</span>Élite
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="gallery.html">Galería</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="search.html" class="active"><i class="fas fa-search"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Búsqueda -->
+    <main class="search-container">
+        <div class="search-box">
+            <h1>Encuentra tu estilo sostenible</h1>
+            <div class="search-input">
+                <input type="text" id="search-input" placeholder="Buscar vestidos, trajes, materiales..." autocomplete="off">
+                <button id="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="search-filters">
+                <label>
+                    <input type="checkbox" name="category" value="dama" checked> Dama
+                </label>
+                <label>
+                    <input type="checkbox" name="category" value="caballero" checked> Caballero
+                </label>
+                <label>
+                    <input type="checkbox" name="material" value="eco" checked> Solo Ecológicos
+                </label>
+            </div>
+        </div>
+
+        <!-- Resultados -->
+        <div class="search-results">
+            <h2 id="results-title">Todos los productos</h2>
+            <div class="results-grid" id="results-grid">
+                <!-- JavaScript cargará los productos aquí -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EcoÉlite. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+/* --- Variables --- */
+:root {
+    --verde-menta: #A2E4B8;
+    --azul-oscuro: #0A2463;
+    --blanco-roto: #FFF9F0;
+    --rosa-suave: #FFD6E0;
+    --gris-texto: #5A5A5A;
+    --sombra: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--blanco-roto);
+    color: var(--azul-oscuro);
+    line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--verde-menta);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.logo-img {
+    width: 40px;
+    height: auto;
+}
+
+.logo span {
+    color: var(--azul-oscuro);
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--azul-oscuro);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--rosa-suave);
+}
+
+/* --- Hero --- */
+.hero-about {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(162, 228, 184, 0.8), rgba(162, 228, 184, 0.8)), 
+                url('../img/hero-about.jpg') center/cover;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+}
+
+/* --- Misión --- */
+.mision {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 5%;
+    background-color: white;
+}
+
+.mision-content {
+    flex: 1;
+}
+
+.mision h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--azul-oscuro);
+}
+
+.highlight {
+    color: var(--azul-oscuro);
+    font-weight: 600;
+}
+
+.mision ul {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.mision li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mision li i {
+    color: var(--verde-menta);
+    font-size: 1.2rem;
+}
+
+.mision-img {
+    flex: 1;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    max-width: 500px;
+}
+
+/* --- Timeline --- */
+.timeline-section {
+    padding: 4rem 5%;
+    background-color: var(--blanco-roto);
+}
+
+.timeline-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--azul-oscuro);
+}
+
+.timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--verde-menta);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.timeline-img {
+    flex: 0 0 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.timeline-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.timeline-img img:hover {
+    transform: scale(1.05);
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+.timeline-content.right {
+    order: -1;
+    text-align: right;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--azul-oscuro);
+}
+
+.timeline-content p {
+    color: var(--gris-texto);
+}
+
+/* --- Equipo --- */
+.team {
+    padding: 4rem 5%;
+    background-color: white;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--azul-oscuro);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: var(--blanco-roto);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid var(--verde-menta);
+}
+
+.team-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-card p {
+    color: var(--gris-texto);
+    margin-bottom: 0.5rem;
+}
+
+.team-card .bio {
+    font-style: italic;
+    color: var(--azul-oscuro);
+}
+
+/* --- Auspiciadores --- */
+.partners {
+    padding: 3rem 5%;
+    background-color: var(--verde-menta);
+    text-align: center;
+}
+
+.partners h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: var(--azul-oscuro);
+}
+
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.partners-grid img {
+    height: 80px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.partners-grid img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--verde-menta);
+    color: var(--azul-oscuro);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    /* Timeline */
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .timeline-img {
+        flex: 0 0 100%;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-content,
+    .timeline-content.right {
+        order: 1;
+        text-align: left;
+        padding: 0;
+    }
+
+    /* Misión */
+    .mision {
+        flex-direction: column;
+    }
+
+    .mision-img {
+        order: -1;
+        margin-bottom: 2rem;
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

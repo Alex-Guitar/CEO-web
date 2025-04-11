@@ -1,0 +1,229 @@
+:root {
+    --verde-menta: #A2E4B8;
+    --azul-oscuro: #0A2463;
+    --blanco-roto: #FFF9F0;
+    --rosa-suave: #FFD6E0;
+    --gris-texto: #5A5A5A;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--blanco-roto);
+    color: var(--azul-oscuro);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--verde-menta);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.logo-img {
+    width: 40px;
+    height: auto;
+}
+
+.logo span {
+    color: var(--azul-oscuro);
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--azul-oscuro);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--rosa-suave);
+}
+
+/* Búsqueda */
+.search-container {
+    max-width: 1200px;
+    margin: 3rem auto 5rem;
+    padding: 0 5%;
+}
+
+.search-box {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.search-box h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--azul-oscuro);
+}
+
+.search-input {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    border: 2px solid var(--verde-menta);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.search-input input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.search-input input:focus {
+    outline: none;
+}
+
+.search-input button {
+    padding: 0 1.5rem;
+    border: none;
+    background-color: var(--verde-menta);
+    color: var(--azul-oscuro);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-input button:hover {
+    background-color: var(--rosa-suave);
+}
+
+.search-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.search-filters label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.search-filters input {
+    accent-color: var(--verde-menta);
+}
+
+/* Resultados */
+.search-results h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--azul-oscuro);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--azul-oscuro);
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--gris-texto);
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--verde-menta);
+    color: var(--azul-oscuro);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-box h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-input {
+        flex-direction: column;
+        border-radius: 12px;
+        border: none;
+    }
+
+    .search-input input {
+        border: 2px solid var(--verde-menta);
+        border-radius: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    .search-input button {
+        padding: 0.8rem;
+        border-radius: 12px;
+    }
+
+    .search-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+}
